@@ -1,23 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gato Gaming - Galería</title>
   <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/estilos.css">
 </head>
+
 <body>
-  <header>
+  <header class="mi-menu">
     <a href="../index.html">
       <img src="../img/logo_text.svg" alt="logo_text">
     </a>
-    <nav>
-      <ul>
+    <nav class="menu-nav">
+      <ul class="menu-list">
         <li><a href="../index.html">Inicio</a></li>
         <li><a href="setup.html">Setup</a></li>
-        <li><a href="./galeria.html">Galería</a></li>
+        <li><a href="./galeria.html" class="active">Galería</a></li>
         <li><a href="./contacto.html">Contacto</a></li>
       </ul>
     </nav>
@@ -25,54 +28,88 @@
   <main>
     <section class="setup-content">
       <h2>Galería visual</h2>
-      <img class="img-setup" src="../img/logo_pared_black.webp" alt="logo pared">
-      <p>Explora nuestro universo visual: tecnología, luces, diseño y atmósfera<br> gamer como nunca la habías visto.</p>
+      
+      <p>Explora nuestro universo visual: tecnología, luces, diseño y atmósfera gamer como nunca la habías visto.
+      </p>
     </section>
 
     <section class="galeria">
-      <div>
-        <h3>Setup completo de Gato Gaming: equilibrio perfecto entre potencia y diseño.</h3>
-        <iframe width="530" height="315" src="https://www.youtube.com/embed/3-PqyxfHkLs?si=j4uI6rEF2npJbtcK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
+      
+<div id="galeriaCarousel" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="4000" data-bs-wrap="true">
 
-      <div>
-        <h3>Interior iluminado con GPU RTX 4090 y refrigeración líquida NZXT.</h3>
-        <iframe width="530" height="315" src="https://www.youtube.com/embed/NcHyE_N1QDI?si=U5zp1NusiCbP-r7h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#galeriaCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#galeriaCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#galeriaCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#galeriaCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
 
-      <div>
-        <h3>Ambiente con luces LED personalizadas en tonos neón rojo y azul.</h3>
-        <iframe width="530" height="315" src="https://www.youtube.com/embed/4W5MumgmNRk?si=8i3jB4mzSCncChfx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
 
-      <div>
-        <h3>Identidad visual proyectada: el rugido digital toma forma.</h3>
-        <img class="img-galeria" src="../img/local.webp" alt="Logo pared">
+  <div class="carousel-inner rounded-3 shadow-sm">
+    <div class="carousel-item active">
+      <img src="../img/logo_pared_black.webp" class="d-block w-100" alt="logo pared">
+      <div class="carousel-caption d-none d-md-block">
       </div>
+    </div>
 
-      <div>
-        
-        <h3>Zona de edición y gestión de contenido: donde las ideas toman forma.</h3>
-        <img class="img-galeria" src="../img/spen.webp" alt="Workstation secundaria">
+    <div class="carousel-item">
+      <img src="../img/local.webp" class="d-block w-100" alt="Logo pared">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="mb-1">Identidad visual proyectada</h5>
+        <p class="mb-0">El rugido digital toma forma.</p>
       </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="../img/spen.webp" class="d-block w-100" alt="Workstation secundaria">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="mb-1">Zona de edición y gestión</h5>
+        <p class="mb-0">Donde las ideas toman forma.</p>
+      </div>
+    </div>
+
+    
+
+    <div class="carousel-item">
+      <img src="../img/setup3.png" class="d-block w-100" alt="logo pared">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="mb-1">Comodidad</h5>
+        <p class="mb-0">Juega cómodo, gana siempre.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#galeriaCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#galeriaCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
+
     </section>
   </main>
   <footer>
     <p>&copy; 2025 Gato Gaming. Todos los derechos reservados.</p>
     <div class="footer__redes">
-    <a href="https://www.instagram.com" target="_blank">
-      <img src="../img/instagram.png" alt="Instagram" />
-    </a>
-    <a href="https://www.facebook.com" target="_blank">
-      <img src="../img/facebook.png" alt="Facebook" />
-    </a>
-    <a href="https://x.com/?lang=es" target="_blank">
-      <img src="../img/x.png" alt="X" />
-    </a>
-    <a href="https://www.tiktok.com/es/" target="_blank">
-      <img src="../img/tik-tok.png" alt="tiktok" />
-    </a>
-  </div>
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="../img/instagram.png" alt="Instagram" />
+      </a>
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="../img/facebook.png" alt="Facebook" />
+      </a>
+      <a href="https://x.com/?lang=es" target="_blank">
+        <img src="../img/x.png" alt="X" />
+      </a>
+      <a href="https://www.tiktok.com/es/" target="_blank">
+        <img src="../img/tik-tok.png" alt="tiktok" />
+      </a>
+    </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
+
 </html>

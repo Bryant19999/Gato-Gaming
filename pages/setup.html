@@ -1,22 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gato Gaming - Setup</title>
   <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/estilos.css">
 </head>
+
 <body>
-  <header>
+  <header class="mi-menu">
     <a href="../index.html">
-      <img src="../img/logo_text.svg" alt="logo">
+      <img src="../img/logo_text.svg" alt="logo_text">
     </a>
-    <nav>
-      <ul>
+    <nav class="menu-nav">
+      <ul class="menu-list">
         <li><a href="../index.html">Inicio</a></li>
-        <li><a href="setup.html">Setup</a></li>
+        <li><a href="setup.html" class="active">Setup</a></li>
         <li><a href="./galeria.html">Galería</a></li>
         <li><a href="./contacto.html">Contacto</a></li>
       </ul>
@@ -24,73 +27,140 @@
   </header>
   <main>
     <section class="setup-content">
-      <h2>Setup</h2>
-      <img class="img-setup" src="../img/setup2.webp" alt="setup">
-      <p>Este es el setup que impulsa cada victoria de Gato Gaming. <br>
-         Máquinas al límite, precisión absoluta.</p>
+  <h2>Setup</h2>
+  <img class="img-setup" src="../img/setup2.webp" alt="setup">
+  <p>Este es el setup que impulsa cada victoria de Gato Gaming. <br>
+    Máquinas al límite, precisión absoluta.</p>
 
-      <h3>Monitor</h3>
-      <ul>
-        <li>Alienware AW2524H – 24.5” IPS, Full HD, 500Hz</li>
-        <img class="img-peripherals" src="../img/monitor.png" alt="imagen monitor">
-      </ul>
+  <div class="accordion" id="setupAccordion">
 
-      <h3>Torre</h3>
-      <ul>
-        <li>Gabinete: Lian Li PC-O11 Dynamic EVO RGB</li>
-        <li>Procesador: Intel Core i9-14900K</li>
-        <li>GPU: NVIDIA GeForce RTX 4090</li>
-        <li>Placa base: ASUS ROG Maximus Z790 Hero</li>
-        <li>RAM: Corsair Vengeance RGB 64GB DDR5</li>
-        <li>SSD: Samsung 990 Pro 2TB</li>
-        <li>PSU: Corsair RM1000x 1000W</li>
-        <li>Refrigeración líquida: NZXT Kraken Elite 360 RGB</li>
-        <img class="img-peripherals" src="../img/torre.png" alt="imagen torre">
-      </ul>
+    <!-- Monitor -->
+    <div class="accordion-item bg-dark text-white">
+      <h2 class="accordion-header" id="headingMonitor">
+        <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMonitor" aria-expanded="false" aria-controls="collapseMonitor">
+          Monitor
+        </button>
+      </h2>
+      <div id="collapseMonitor" class="accordion-collapse collapse" aria-labelledby="headingMonitor" data-bs-parent="#setupAccordion">
+        <div class="accordion-body">
+          <ul>
+            <li>Alienware AW2524H – 24.5” IPS, Full HD, 500Hz</li>
+            <img class="img-peripherals" src="../img/monitor.png" alt="imagen monitor">
+          </ul>
+        </div>
+      </div>
+    </div>
 
-      <h3>Periféricos</h3>
-      <ul>
-        <li>Teclado: SteelSeries Apex Pro TKL</li>
-        <li>Mouse: Logitech G Pro X Superlight 2</li>
-        <li>Mousepad: Glorious 3XL RGB</li>
-        <li>Audífonos: HyperX Cloud III Wireless</li>
-        <li>Micrófono: Shure MV7</li>
-        <li>Cámara: Elgato Facecam Pro</li>
-        <li>Controlador: Scuf Reflex FPS</li>
-        <img class="img-peripherals" src="../img/perifericos.png" alt="imagen perifericos">
-      </ul>
+    <!-- Torre -->
+    <div class="accordion-item bg-dark text-white">
+      <h2 class="accordion-header" id="headingTorre">
+        <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTorre" aria-expanded="false" aria-controls="collapseTorre">
+          Torre
+        </button>
+      </h2>
+      <div id="collapseTorre" class="accordion-collapse collapse" aria-labelledby="headingTorre" data-bs-parent="#setupAccordion">
+        <div class="accordion-body">
+          <ul>
+            <li>Gabinete: Lian Li PC-O11 Dynamic EVO RGB</li>
+            <li>Procesador: Intel Core i9-14900K</li>
+            <li>GPU: NVIDIA GeForce RTX 4090</li>
+            <li>Placa base: ASUS ROG Maximus Z790 Hero</li>
+            <li>RAM: Corsair Vengeance RGB 64GB DDR5</li>
+            <li>SSD: Samsung 990 Pro 2TB</li>
+            <li>PSU: Corsair RM1000x 1000W</li>
+            <li>Refrigeración líquida: NZXT Kraken Elite 360 RGB</li>
+            <img class="img-peripherals" src="../img/torre.png" alt="imagen torre">
+          </ul>
+        </div>
+      </div>
+    </div>
 
-      <h3>Extras</h3>
-      <ul>
-        <li>Silla: Secretlab TITAN Evo 2024</li>
-        <li>Luz ambiente: Govee RGB</li>
-        <li>Soporte de audífonos: Razer Base Station V2</li>
-        <li>Brazo de micrófono: Elgato Wave Mic Arm LP</li>
-        <li>Monitor secundario: ASUS ProArt 27”</li>
-        <img class="img-peripherals" src="../img/setup3.png" alt="imagen extra">
-      </ul>
+    <!-- Periféricos -->
+    <div class="accordion-item bg-dark text-white">
+      <h2 class="accordion-header" id="headingPerifericos">
+        <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePerifericos" aria-expanded="false" aria-controls="collapsePerifericos">
+          Periféricos
+        </button>
+      </h2>
+      <div id="collapsePerifericos" class="accordion-collapse collapse" aria-labelledby="headingPerifericos" data-bs-parent="#setupAccordion">
+        <div class="accordion-body">
+          <ul>
+            <li>Teclado: SteelSeries Apex Pro TKL</li>
+            <li>Mouse: Logitech G Pro X Superlight 2</li>
+            <li>Mousepad: Glorious 3XL RGB</li>
+            <li>Audífonos: HyperX Cloud III Wireless</li>
+            <li>Micrófono: Shure MV7</li>
+            <li>Cámara: Elgato Facecam Pro</li>
+            <li>Controlador: Scuf Reflex FPS</li>
+            <img class="img-peripherals" src="../img/perifericos.png" alt="imagen perifericos">
+          </ul>
+        </div>
+      </div>
+    </div>
 
-    
-        <h3>La setup de GATO GAMING está diseñada para competir al más alto nivel.</h3>
-      
-    </section>
+    <!-- Extras -->
+    <div class="accordion-item bg-dark text-white">
+      <h2 class="accordion-header" id="headingExtras">
+        <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExtras" aria-expanded="false" aria-controls="collapseExtras">
+          Extras
+        </button>
+      </h2>
+      <div id="collapseExtras" class="accordion-collapse collapse" aria-labelledby="headingExtras" data-bs-parent="#setupAccordion">
+        <div class="accordion-body">
+          <ul>
+            <li>Silla: Secretlab TITAN Evo 2024</li>
+            <li>Luz ambiente: Govee RGB</li>
+            <li>Soporte de audífonos: Razer Base Station V2</li>
+            <li>Brazo de micrófono: Elgato Wave Mic Arm LP</li>
+            <li>Monitor secundario: ASUS ProArt 27”</li>
+            <img class="img-peripherals" src="../img/setup3.png" alt="imagen extra">
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <section class="my-5">
+  <h3>Rendimiento estimado</h3>
+  <div class="mb-3">
+    <label>Gaming 4K</label>
+    <div class="progress">
+      <div class="progress-bar bg-warning" style="width: 100%">100%</div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label>Streaming</label>
+    <div class="progress">
+      <div class="progress-bar bg-info" style="width: 95%">95%</div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label>Edición de Video</label>
+    <div class="progress">
+      <div class="progress-bar bg-success" style="width: 90%">90%</div>
+    </div>
+  </div>
+</section>
+</section>
   </main>
   <footer>
     <p>&copy; 2025 Gato Gaming. Todos los derechos reservados.</p>
     <div class="footer__redes">
-    <a href="https://www.instagram.com" target="_blank">
-      <img src="../img/instagram.png" alt="Instagram" />
-    </a>
-    <a href="https://www.facebook.com" target="_blank">
-      <img src="../img/facebook.png" alt="Facebook" />
-    </a>
-    <a href="https://x.com/?lang=es" target="_blank">
-      <img src="../img/x.png" alt="X" />
-    </a>
-    <a href="https://www.tiktok.com/es/" target="_blank">
-      <img src="../img/tik-tok.png" alt="tiktok" />
-    </a>
-  </div>
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="../img/instagram.png" alt="Instagram" />
+      </a>
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="../img/facebook.png" alt="Facebook" />
+      </a>
+      <a href="https://x.com/?lang=es" target="_blank">
+        <img src="../img/x.png" alt="X" />
+      </a>
+      <a href="https://www.tiktok.com/es/" target="_blank">
+        <img src="../img/tik-tok.png" alt="tiktok" />
+      </a>
+    </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
+
 </html>
