@@ -1,3 +1,18 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -45,6 +60,7 @@ body {
 .menu-nav ul li a {
   display: inline-block;  
   color: #ffb100;
+  font-size: 15px;
   text-decoration: none;  
   font-weight: bold;
   line-height: 1;         
@@ -52,7 +68,10 @@ body {
   background: transparent;
 }
 
-.menu-nav ul li a:hover,
+.menu-nav ul li a:hover{
+  transform: scale(1.1);
+  color: #ffb100;
+}
 .menu-nav ul li a.active {
   transform: scale(1.1);
   color: #8ae7ed; 
@@ -86,6 +105,14 @@ input, textarea, button {
   padding: 10px;
   border: none;
   border-radius: 4px;
+}
+
+.banner {
+  background-image: url(../img/Banner_gg.png);
+  min-height: 200px; 
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
 }
 
 h1 { 
@@ -124,7 +151,7 @@ h3 {
 
 .button {
   display: flex;
-  width: 200px;
+  width: 215px;
   justify-content: center;
   padding: 12px 24px;
   background-color: #ffb100;
@@ -253,4 +280,84 @@ form button {
   display: block;
   margin-top: 10px;
   border-radius: 8px;
+}
+
+.games {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  justify-items: center;
+}
+
+.card-games img {
+  height: 155px;
+  width: auto;
+  border-radius: 5px;
+}
+
+.banner-games {
+  background-image: url(../img/banner-games-desk.png);
+  height: 400px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  background-size: cover;
+}
+
+.card-games p {
+  margin: 5px;
+  font-weight: bold;
+}
+
+
+/* ESTILOS EN MOBILE */
+@media only screen and (max-width: 768px) {
+  .banner {
+  background-image: url(../img/banner-mobile.png);
+  height: 391px;
+  width: auto;
+}
+
+.banner-games {
+  background-image: url(../img/banner-mob-games.png);
+  background-size: cover;
+  height: 360px;
+  width: auto;
+}
+
+main {
+  width: 100%;
+}
+h1 {
+  margin: 15px;
+  line-height: normal;
+}
+
+.setup_flex img {
+  margin: 10px auto;
+}
+.button {
+  margin: 10px auto;
+  width: 215px;
+}
+.setup_flex {
+  text-align: center;
+}
+footer {
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.setup-content img {
+  width: 100%;
+  margin: 10px 0;
+}
+.menu-nav ul li a {
+  font-size: 11px;
+}
+.games {
+  grid-template-columns: 1fr;
+}
 }
