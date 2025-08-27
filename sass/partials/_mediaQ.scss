@@ -1,0 +1,65 @@
+/* ESTILOS EN MOBILE */
+@media only screen and (max-width: 500px) {
+    .banner {
+        background-image: url(../img/banner-mobile.png);
+        height: 391px;
+        width: auto;
+    }
+
+    .banner-games {
+        background-image: url(../img/banner-mob-games.png);
+        background-size: cover;
+        height: 360px;
+        width: auto;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    h1 {
+        margin: 15px;
+        line-height: normal;
+    }
+
+    .setup_flex {
+        img {
+            margin: 10px auto;
+        }
+    }
+
+    .button {
+        margin: 10px auto;
+        width: 215px;
+    }
+
+    .setup_flex {
+        text-align: center;
+    }
+
+    footer {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .setup-content {
+        img {
+            width: 100%;
+            margin: 10px 0;
+        }
+    }
+
+    .menu-nav {
+        ul {
+            li {
+                a {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+
+    .games {
+        grid-template-columns: 1fr;
+    }
+}

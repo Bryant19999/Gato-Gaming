@@ -1,20 +1,11 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+main {
+  flex: 1;
 }
 
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-main {
-  flex: 1;
-}
-
-body {
   font-family: "Montserrat", sans-serif;
   background-color: #111;
   color: #f5f5f5;
@@ -23,21 +14,19 @@ body {
 }
 
 .mi-menu {
-  position: relative;              
+  position: relative;
   background-color: #222;
   padding: 10px 20px;
   text-align: left;
-  display: flex;                   
+  display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .mi-menu a img {
   width: 60px;
   height: auto;
   transition: transform 0.2s ease;
 }
-
 .mi-menu a img:hover {
   transform: scale(1.1);
 }
@@ -47,34 +36,30 @@ body {
   justify-content: flex-end;
   align-items: center;
 }
-
 .menu-nav ul {
   list-style: none;
-  padding: 0;            
-  margin: 0;              
+  padding: 0;
+  margin: 0;
   display: flex;
   gap: 20px;
 }
-
-
 .menu-nav ul li a {
-  display: inline-block;  
+  display: inline-block;
   color: #ffb100;
   font-size: 15px;
-  text-decoration: none;  
+  text-decoration: none;
   font-weight: bold;
-  line-height: 1;         
-  padding: 0;             
+  line-height: 1;
+  padding: 0;
   background: transparent;
 }
-
-.menu-nav ul li a:hover{
+.menu-nav ul li a:hover {
   transform: scale(1.1);
   color: #ffb100;
 }
 .menu-nav ul li a.active {
   transform: scale(1.1);
-  color: #8ae7ed; 
+  color: #8ae7ed;
 }
 
 main {
@@ -101,7 +86,9 @@ form {
   margin: 20px auto;
 }
 
-input, textarea, button {
+input,
+textarea,
+button {
   padding: 10px;
   border: none;
   border-radius: 4px;
@@ -109,14 +96,14 @@ input, textarea, button {
 
 .banner {
   background-image: url(../img/Banner_gg.png);
-  min-height: 200px; 
+  min-height: 200px;
   background-size: cover;
   background-position: center;
   border-radius: 10px;
 }
 
-h1 { 
-  text-align: center; 
+h1 {
+  text-align: center;
   font-weight: bold;
 }
 
@@ -142,7 +129,6 @@ h3 {
   display: flex;
   flex-direction: column;
 }
-
 .setup_flex img {
   width: 300px;
   border-radius: 10px;
@@ -163,8 +149,8 @@ h3 {
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.button:hover { 
-  transform: scale(1.03); 
+.button:hover {
+  transform: scale(1.03);
 }
 
 .footer__redes {
@@ -178,9 +164,8 @@ h3 {
   height: 24px;
   transition: transform 0.2s ease;
 }
-.footer__redes a:hover img { 
+.footer__redes a:hover img {
   transform: scale(1.2);
-   
 }
 
 h2 {
@@ -188,9 +173,9 @@ h2 {
 }
 
 .setup-content h2,
-.setup-content p { 
+.setup-content p {
   text-align: center;
-  margin-top: 15px; 
+  margin-top: 15px;
 }
 
 .img-setup {
@@ -199,47 +184,45 @@ h2 {
   margin: 0 auto;
   border-radius: 10px;
 }
+
 .img-peripherals {
   width: 400px;
   margin: 20px;
   border-radius: 5px;
 }
+
 .img-galeria {
   width: 530px;
   margin: 20px;
   border-radius: 5px;
 }
 
-form button { 
-  margin: 0 auto; 
+form button {
+  margin: 0 auto;
 }
 
 .galeria .carousel-inner img {
   border-radius: 10px;
 }
-
 .galeria .carousel-caption {
-  background: rgba(0, 0, 0, 0.45);   
+  background: rgba(0, 0, 0, 0.45);
   border-radius: 10px;
   padding: 8px 4px;
   bottom: 3rem;
 }
-
-.galeria .carousel-indicators .active {
-  background-color: #ffb100;         
-}
-
 .galeria .carousel-indicators {
   gap: 6px;
 }
-
+.galeria .carousel-indicators .active {
+  background-color: #ffb100;
+}
 .galeria .carousel-item img {
   width: 100%;
-  height: auto;           
+  height: auto;
 }
 
-#galeriaCarousel { 
-  margin-bottom: 24px; 
+#galeriaCarousel {
+  margin-bottom: 24px;
 }
 
 .accordion-item {
@@ -247,7 +230,7 @@ form button {
   border: 1px solid #333;
   border-radius: 8px;
   margin-bottom: 10px;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .accordion-button {
@@ -257,13 +240,11 @@ form button {
   font-size: 1.1rem;
   border: none;
   padding: 0.75rem 1rem;
-  box-shadow: none; 
+  box-shadow: none;
 }
-
 .accordion-button::after {
   filter: invert(73%) sepia(94%) saturate(2408%) hue-rotate(357deg) brightness(101%) contrast(102%);
 }
-
 .accordion-button:hover {
   background-color: #333;
   color: #8ae7ed;
@@ -275,7 +256,6 @@ form button {
   padding: 1rem;
   border-top: 1px solid #333;
 }
-
 .accordion-body img {
   display: block;
   margin-top: 10px;
@@ -311,53 +291,50 @@ form button {
   font-weight: bold;
 }
 
-
 /* ESTILOS EN MOBILE */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 500px) {
   .banner {
-  background-image: url(../img/banner-mobile.png);
-  height: 391px;
-  width: auto;
+    background-image: url(../img/banner-mobile.png);
+    height: 391px;
+    width: auto;
+  }
+  .banner-games {
+    background-image: url(../img/banner-mob-games.png);
+    background-size: cover;
+    height: 360px;
+    width: auto;
+  }
+  main {
+    width: 100%;
+  }
+  h1 {
+    margin: 15px;
+    line-height: normal;
+  }
+  .setup_flex img {
+    margin: 10px auto;
+  }
+  .button {
+    margin: 10px auto;
+    width: 215px;
+  }
+  .setup_flex {
+    text-align: center;
+  }
+  footer {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .setup-content img {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .menu-nav ul li a {
+    font-size: 11px;
+  }
+  .games {
+    grid-template-columns: 1fr;
+  }
 }
 
-.banner-games {
-  background-image: url(../img/banner-mob-games.png);
-  background-size: cover;
-  height: 360px;
-  width: auto;
-}
-
-main {
-  width: 100%;
-}
-h1 {
-  margin: 15px;
-  line-height: normal;
-}
-
-.setup_flex img {
-  margin: 10px auto;
-}
-.button {
-  margin: 10px auto;
-  width: 215px;
-}
-.setup_flex {
-  text-align: center;
-}
-footer {
-  flex-direction: column-reverse;
-  align-items: center;
-}
-
-.setup-content img {
-  width: 100%;
-  margin: 10px 0;
-}
-.menu-nav ul li a {
-  font-size: 11px;
-}
-.games {
-  grid-template-columns: 1fr;
-}
-}
+/*# sourceMappingURL=styles.css.map */

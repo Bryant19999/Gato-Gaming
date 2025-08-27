@@ -1,0 +1,10 @@
+@mixin form-control($pad: 10px, $rad: 4px) {
+  padding: $pad;
+  border: none;
+  border-radius: $rad;
+} 
+
+@mixin setup-content-typo($align: center, $mt: 15px) {
+  text-align: $align;
+  margin-top: $mt;
+}
