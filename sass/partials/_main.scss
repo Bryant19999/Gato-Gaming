@@ -30,12 +30,46 @@ body {
             width: 60px;
             height: auto;
             transition: transform 0.2s ease;
+            transform-origin: center;
+            will-change: transform;
         }
 
-        img:hover {
-            transform: scale(1.1);
+    }
+
+    .logo-link {
+
+        &:hover,
+        &:focus-visible {
+            animation: logo-anim .8s ease-out both;
+            outline: none;
         }
     }
+}
+
+@keyframes logo-anim {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    70% {
+        transform: scale(1.08) rotate(180deg);
+    }
+
+    100% {
+        transform: scale(1.1) rotate(180deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mi-menu {
+        a {
+            img {
+                animation: none !important;
+            }
+        }
+    }
+
+
 }
 
 .menu-nav {
@@ -62,14 +96,18 @@ body {
                 background: transparent;
             }
 
-            a:hover {
-                transform: scale(1.1);
-                color: $naranja;
+            a {
+                &:hover {
+                    transform: scale(1.1);
+                    color: $naranja;
+                }
             }
 
-            a.active {
-                transform: scale(1.1);
-                color: #8ae7ed;
+            a {
+                &.active {
+                    transform: scale(1.1);
+                    color: #8ae7ed;
+                }
             }
         }
 
