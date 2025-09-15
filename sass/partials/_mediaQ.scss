@@ -1,15 +1,14 @@
 /* ESTILOS EN MOBILE */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 400px) {
     .banner {
         background-image: url(../img/banner-mobile.png);
-        height: 391px;
+        padding: 175px 0;
         width: auto;
     }
 
     .banner-games {
         background-image: url(../img/banner-mob-games.png);
         background-size: cover;
-        height: 360px;
         width: auto;
     }
 
@@ -24,6 +23,7 @@
 
     .setup_flex {
         img {
+            width: 365px;
             margin: 10px auto;
         }
     }
@@ -61,5 +61,67 @@
 
     .games {
         grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 1024px) {
+
+   .banner {
+        background-image: url(../img/Banner_gg.png);
+        padding: 35px 0;
+        width: 330px;
+        margin: 0 auto;
+    }
+
+    .setup_flex {
+        img {
+            width: 90%;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+    }
+
+    .menu-nav {
+        ul {
+            li {
+                a {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .button {
+        width: 215px;
+        margin: 20px auto;
+    }
+
+    main {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+
+    .card-games {
+        img {
+            width: 245px;
+        }
+    }
+    .img-setup {
+        width: 350px;
+    }
+    .games {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    .banner {
+        padding: 55px 0;
+        width: 560px;
+    }
+    .games {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

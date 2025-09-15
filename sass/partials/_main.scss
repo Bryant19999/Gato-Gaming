@@ -6,7 +6,7 @@ main {
 }
 
 body {
-    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     font-family: $font;
@@ -64,7 +64,7 @@ body {
     .mi-menu {
         a {
             img {
-                animation: none !important;
+                animation: none;
             }
         }
     }
@@ -148,7 +148,7 @@ button {
 
 .banner {
     background-image: url(../img/Banner_gg.png);
-    min-height: 200px;
+    padding: 90px 0;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -157,6 +157,7 @@ button {
 h1 {
     text-align: center;
     font-weight: bold;
+    margin-top: 15px;
 }
 
 h3 {
@@ -180,12 +181,14 @@ h3 {
 .setup_flex {
     display: flex;
     flex-direction: column;
+        align-items: center;
 
     img {
-        width: 300px;
+        width: 700px;
         border-radius: 10px;
         margin-bottom: 15px;
     }
+    
 }
 
 .button {
@@ -215,7 +218,6 @@ h3 {
 
     img {
         width: 24px;
-        height: 24px;
         transition: transform 0.2s ease;
     }
 
@@ -291,7 +293,6 @@ form {
     .carousel-item {
         img {
             width: 100%;
-            height: auto;
         }
     }
 }
@@ -349,15 +350,14 @@ form {
 
 .card-games {
     img {
-        height: 155px;
-        width: auto;
+        width: 275px;
         border-radius: 5px;
     }
 }
 
 .banner-games {
     background-image: url(../img/banner-games-desk.png);
-    height: 400px;
+    padding: 200px 0;
     max-width: 600px;
     margin: 0 auto;
     background-repeat: no-repeat;
